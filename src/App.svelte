@@ -1,5 +1,9 @@
 <script lang="ts">
 	import PostList from "./components/PostList.svelte";
+	import { fetchPosts, initPosts } from "./stores/post";
+
+	initPosts();
+	fetchPosts();
 </script>
 
 <main>
@@ -7,7 +11,5 @@
 </main>
 
 <style lang="scss">
-	body {
-		background-color: #f6f6f6;
-	}
+	
 </style>
