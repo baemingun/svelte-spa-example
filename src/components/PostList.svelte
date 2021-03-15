@@ -2,6 +2,7 @@
   import PostItem from "./PostItem.svelte";
   import { fetchPostsStatus, posts } from '../stores/post';
   import RequestStatus from "../models/RequestStatus";
+import Loader from "./base/Loader.svelte";
 </script>
 
 <style lang="scss">
@@ -13,12 +14,9 @@
 </style>
 
 <!-- markup (zero or more items) goes here -->
+<Loader isLoading={$fetchPostsStatus === RequestStatus.FETCHING} />
 <ul>
-  {#if $fetchPostsStatus === RequestStatus.FETCHING}
-  로딩중
-  {:else}
   {#each $posts as post}
-     <PostItem userId={post.userId} title={post.title} content={post.body} />
+  <PostItem userId={post.userId} title={post.title} content={post.body} />
   {/each}
-  {/if}
 </ul>
