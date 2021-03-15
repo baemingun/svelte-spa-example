@@ -1,8 +1,4 @@
 <script lang="ts">
-import type Post from "../models/Post";
-
-
-  let post: Post;
   export let userId: number;
   export let title: string;
   export let content: string;
