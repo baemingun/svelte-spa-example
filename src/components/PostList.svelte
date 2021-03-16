@@ -2,7 +2,10 @@
   import PostItem from "./PostItem.svelte";
   import { fetchPostsStatus, posts } from '../stores/post';
   import RequestStatus from "../models/RequestStatus";
-import Loader from "./base/Loader.svelte";
+  import Loader from "./base/Loader.svelte";
+
+  const isLoading = $fetchPostsStatus === RequestStatus.FETCHING;
+
 </script>
 
 <style lang="scss">
@@ -13,7 +16,6 @@ import Loader from "./base/Loader.svelte";
   }
 </style>
 
-<!-- markup (zero or more items) goes here -->
 <Loader isLoading={$fetchPostsStatus === RequestStatus.FETCHING} />
 <ul>
   {#each $posts as post}
