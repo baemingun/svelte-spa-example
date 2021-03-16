@@ -62,6 +62,6 @@
   </div>
   <div>
     <button on:click={() => { isWriting = false }}>취소</button>
-    <button on:click={() => { console.log(title, content) }}>제출</button>
+    <button on:click={() => { alert(`제목: ${title}\n내용: ${content}`) }}>제출</button>
   </div>
 </div>
