@@ -1,8 +1,8 @@
 <script lang="ts">
   import PostItem from "./PostItem.svelte";
-  import { fetchPostsStatus, posts } from '../stores/post';
-  import RequestStatus from "../models/RequestStatus";
-  import Loader from "./base/Loader.svelte";
+  import { fetchPostsStatus, posts } from '../../stores/post';
+  import RequestStatus from "../../models/RequestStatus";
+  import Loader from "../base/Loader.svelte";
 
   const isLoading = $fetchPostsStatus === RequestStatus.FETCHING;
 
