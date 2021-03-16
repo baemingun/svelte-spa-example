@@ -1,5 +1,5 @@
 <script lang="ts">
-	import WriteButton from "./components/WriteButton.svelte";
+	import WriteButton from "./components/FloatingButton.svelte";
 	import PostList from "./components/list/PostList.svelte";
 	import { fetchPosts, initPosts } from "./stores/post";
 	import PostWrite from "./components/PostWrite.svelte";
